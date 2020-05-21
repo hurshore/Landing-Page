@@ -8,7 +8,6 @@ hamburgerIcon.addEventListener('click', navToggle);
 closeIcon.addEventListener('click', navToggle);
 
 function navToggle(event) {
-  console.log(event.target.parentElement);
   if(event.target.parentElement.classList.contains('nav-open')){
     event.target.parentElement.style.display = 'none';
     closeIcon.style.display = 'block';
@@ -23,4 +22,11 @@ function navToggle(event) {
     open = false;
   }
   event.preventDefault();
+}
+
+function closeNav() {
+  backdrop.style.display = 'none';
+  hamburgerIcon.style.display = 'block';
+  closeIcon.style.display = 'none';
+  responsiveNav.style.display = 'none';
 }
